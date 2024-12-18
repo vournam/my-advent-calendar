@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advent Calendar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="snow-container"></div>
+    <div class="calendar-container">
+        <h1>Advent Calendar</h1>
+        <div class="calendar">
+            <!-- Create 24 doors -->
+            <script>
+                for (let i = 1; i <= 24; i++) {
+                    document.write(`
+                        <div class="door" data-day="${i}">
+                            <div class="door-frame">
+                                <div class="door-front">${i}</div>
+                                <div class="door-back"></div>
+                            </div>
+                        </div>
+                    `);
+                }
+            </script>
+        </div>
+    </div>
+
+    <!-- Santa Animation Container -->
+    <div class="santa-animation-container" id="santa-animation">
+        <div class="santa-message">
+            <p>Ho, Ho, Ho! Merry Christmas!</p>
+        </div>
+        <div class="santa-image"></div>
+    </div>
+
+    <div class="references">
+        Background image sourced from <a href="https://www.figma.com/community/file/1047967420042964585" target="_blank">Alex in Figma</a> and 3D icon sourced from <a href="https://www.figma.com/community/file/1054791442997220170" target="_blank">Iconfinder</a>.
+    </div>
+
+    <!-- Audio Element for Christmas Song -->
+    <audio id="xmas-song" preload="auto">
+        <source src="img/sound.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
